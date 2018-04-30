@@ -14,7 +14,7 @@ public class MyClass {
             Query sum from (fromIdx, toIdx)
         */
         public int sum(int fromIdx, int toIdx) {
-            if (fromIdx < 0 || toIdx < 0) {
+            if (fromIdx < 0 || toIdx < 0 || fromIdx > tree.length || toIdx > tree.length) {
                 throw new RunTimeException("invalid indices: " + formIdx + ", " + toIdx);
             }
 
