@@ -14,6 +14,14 @@ public class MyClass {
             Query sum from (fromIdx, toIdx)
         */
         public int sum(int fromIdx, int toIdx) {
+            if (fromIdx < 0 || toIdx < 0) {
+                throw new RunTimeException("invalid indices: " + formIdx + ", " + toIdx);
+            }
+
+            if (fromIdx > toIdx) {
+                return sum(toIdx, fromIdx);
+            }
+
             int sum1 = 0;
             if (fromIdx> 0) {
                 sum1 = sum(fromIdx-1);
