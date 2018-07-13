@@ -11,7 +11,7 @@ public class KMP
         System.out.print(" ]");
     }
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         String S = "AABAACAADAABAABA";
         String pat = "AABA";
         
@@ -44,7 +44,7 @@ public class KMP
 
         
         /*
-		Source: KMP Wikipedia (https://www.wikiwand.com/en/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm)
+        Source: KMP Wikipedia (https://www.wikiwand.com/en/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm)
             algorithm kmp_search:
                 input:
                     an array of characters, S (the text to be searched)
@@ -102,7 +102,7 @@ public class KMP
             return -1;
         }
         
-		/*
+        /*
          algorithm kmp_table:
             input:
                 an array of characters, W (the word to be analyzed)
@@ -130,7 +130,7 @@ public class KMP
                     let pos ← pos + 1, cnd ← cnd + 1
         
             let T[pos] ← cnd (only need when all word occurrences searched)
-		*/
+        */
         public int[] buildLookup(String pat) {
             int N = pat.length();
             int[] table = new int[N];
