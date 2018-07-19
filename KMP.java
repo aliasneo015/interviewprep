@@ -140,6 +140,7 @@ public class KMP
             int start = 0;
             while(pos < N) {
                 if (pat.charAt(pos) == pat.charAt(start)) {
+                    table[pos] = table[start];
                     pos++;
                     start++;
                 }
