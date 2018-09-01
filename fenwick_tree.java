@@ -47,7 +47,7 @@ public class MyClass {
     
         private void update(int i, int val) {
             int idx = i + 1;
-            while (idx < tree.length) {
+            while (idx <= tree.length) {
                 tree[idx] += val;
                 idx = getNext(idx);
             }
