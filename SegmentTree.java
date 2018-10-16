@@ -46,9 +46,9 @@ SegmentTree {
         return num<<1;
     }
 	
-	int rangeMinQuery(int[] segTree, int qLow, int wHigh, int low, int high, int pos) {
+	int rangeMinQuery(int[] segTree, int qLow, int qHigh, int low, int high, int pos) {
 		//check total overlap of query with node range
-		if (low >= qLow && qHigh >= high) {
+		if (low >= qLow && hight <= qHigh) {
 			return segTree[pos];
 		}
 		
